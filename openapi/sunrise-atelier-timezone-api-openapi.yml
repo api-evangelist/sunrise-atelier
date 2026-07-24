@@ -1,0 +1,117 @@
+openapi: 3.1.0
+info:
+  title: Sunrise.am World Time Ip Timezone API
+  version: '1.0'
+  description: A free, public JSON API that returns the current time, timezone information, daylight-saving (DST) data, and IP-based geolocation of time for any location on Earth. No API key is required and CORS is enabled. Documented at https://sunrise.am/developer and served from the time.now host (mirrored on sunrise.am). This specification was generated from live responses observed on 2026-07-21 and the published developer documentation; it is not an official provider-published OpenAPI file.
+  termsOfService: https://sunrise.am/developer#attribution
+  contact:
+    name: Sunrise.am / Time.Now
+    url: https://sunrise.am/developer
+servers:
+- url: https://time.now/developer/api
+  description: Canonical base URL documented at https://sunrise.am/developer
+- url: https://sunrise.am/developer/api
+  description: Mirror served from the sunrise.am host
+tags:
+- name: Timezone
+paths:
+  /timezone:
+    get:
+      operationId: listTimezones
+      summary: List all IANA timezones
+      description: Returns a JSON array of all valid IANA timezone strings.
+      responses:
+        '200':
+          description: Array of IANA timezone identifiers.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                  example: America/New_York
+      tags:
+      - Timezone
+  /timezone/{area}/{location}:
+    get:
+      operationId: getTimeByTimezone
+      summary: Get current time for a timezone
+      description: Returns the current time object for a specific IANA timezone, e.g. Europe/London. Some IANA zones contain three path segments (e.g. America/Argentina/Buenos_Aires).
+      parameters:
+      - name: area
+        in: path
+        required: true
+        description: IANA area, e.g. Europe, America, Asia.
+        schema:
+          type: string
+        example: Europe
+      - name: location
+        in: path
+        required: true
+        description: IANA location, e.g. London, New_York.
+        schema:
+          type: string
+        example: London
+      responses:
+        '200':
+          description: Current time object for the timezone.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TimeObject'
+        '404':
+          description: Unknown timezone (returns an HTML 404 page).
+      tags:
+      - Timezone
+components:
+  schemas:
+    TimeObject:
+      type: object
+      description: Fields observed on live 2026-07-21 responses. The published docs list a subset; abbreviation, client_ip, dst_from, dst_until and raw_offset were additionally observed on the wire.
+      properties:
+        timezone:
+          type: string
+          example: Europe/London
+        datetime:
+          type: string
+          description: Current local time in ISO8601 format with offset.
+          example: '2026-07-21T09:50:15.248585+01:00'
+        utc_datetime:
+          type: string
+          example: '2026-07-21T08:50:15.248654Z'
+        unixtime:
+          type: integer
+          description: Seconds since the Unix epoch (UTC).
+          example: 1784623815
+        utc_offset:
+          type: string
+          example: +01:00
+        raw_offset:
+          type: integer
+          description: Base offset from UTC in seconds, excluding DST.
+          example: 0
+        abbreviation:
+          type: string
+          example: BST
+        dst:
+          type: boolean
+        dst_offset:
+          type: integer
+          example: 3600
+        dst_from:
+          type:
+          - string
+          - 'null'
+        dst_until:
+          type:
+          - string
+          - 'null'
+        day_of_week:
+          type: integer
+        day_of_year:
+          type: integer
+        week_number:
+          type: integer
+        client_ip:
+          type: string
+          description: The IP address used for the geo-lookup.
