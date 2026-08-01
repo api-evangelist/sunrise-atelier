@@ -1,0 +1,21 @@
+generated: 2026-07-21
+method: derived
+source: Derived from openapi/sunrise-atelier-world-time-openapi.yaml + live probes (2026-07-21)
+provider: sunrise-atelier
+api: Sunrise.am World Time API
+standards:
+- id: rfc9457
+  conforms: false
+  evidence: '4xx errors return a flat {"error": "..."} JSON object, not application/problem+json.'
+- id: oauth2
+  conforms: false
+  evidence: Keyless public API; no OAuth flows declared.
+- id: oidc
+  conforms: false
+  evidence: No OpenID Connect discovery; /.well-known/openid-configuration returns 404.
+- id: pagination
+  conforms: false
+  evidence: The timezone list is returned as a single unpaged JSON array.
+- id: idempotency
+  conforms: true
+  evidence: All operations are safe, read-only HTTP GETs and are inherently idempotent.

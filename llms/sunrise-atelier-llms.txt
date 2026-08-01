@@ -1,0 +1,44 @@
+# Sunrise.am / Time.Now World Time API
+
+> Free, public, keyless JSON API for the current time, timezone information,
+> daylight-saving (DST) data, and IP-based time geolocation for any location
+> on Earth. Operated by Sunrise Atelier (Sunrise.am). No API key; CORS enabled.
+> Attribution to Time.Now is requested.
+
+Generated: 2026-07-21 (method: generated from apis.yml + repo artifacts; not provider-published).
+Base URL: https://time.now/developer/api (mirror: https://sunrise.am/developer/api)
+Docs: https://sunrise.am/developer
+
+## Operations
+
+- listTimezones: `GET /timezone` - JSON array of all valid IANA timezone strings.
+- getTimeByTimezone: `GET /timezone/{area}/{location}` - current time object for a timezone (e.g. Europe/London).
+- getTimeByRequesterIp: `GET /ip` - current time auto-detected from the caller's public IP.
+- getTimeBySpecificIp: `GET /ip/{ip}` - current time resolved from a given IPv4/IPv6 address.
+
+## Response fields (TimeObject)
+
+timezone, datetime, utc_datetime, unixtime, utc_offset, raw_offset, abbreviation,
+dst, dst_offset, dst_from, dst_until, day_of_week, day_of_year, week_number, client_ip.
+
+## Errors
+
+Flat JSON envelope `{"error": "<message>"}` on 4xx (e.g. 400 "Invalid IP address format").
+Not RFC 9457. Unknown timezone returns an HTML 404 page.
+
+## Conventions
+
+- Auth: none (keyless, HTTPS, CORS enabled).
+- Idempotency: all GET, safe/idempotent by nature.
+- Pagination: none (full timezone list returned in one array).
+- Rate limiting: no RateLimit/Retry-After headers observed.
+
+## Artifacts in this repo
+
+- OpenAPI: openapi/sunrise-atelier-world-time-openapi.yaml
+- Authentication: authentication/sunrise-atelier-authentication.yml
+- Conventions: conventions/sunrise-atelier-conventions.yml
+- Errors: errors/sunrise-atelier-problem-types.yml
+- Conformance: conformance/sunrise-atelier-conformance.yml
+- MCP (candidate): mcp/sunrise-atelier-mcp.yml
+- Agent Skill: skills/sunrise-atelier-get-current-time.md

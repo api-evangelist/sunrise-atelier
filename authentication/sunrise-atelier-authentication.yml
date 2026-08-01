@@ -1,0 +1,19 @@
+generated: 2026-07-21
+method: searched
+source: https://sunrise.am/developer (published docs) + live probe 2026-07-21
+provider: sunrise-atelier
+summary: >-
+  The Sunrise.am World Time API is a fully public, keyless API. The developer
+  documentation states "No API Key required - just start fetching" and CORS is
+  enabled for direct browser access. No API key, token, OAuth, or other
+  credential is issued or accepted; the only stated requirement is an
+  attribution link back to Time.Now.
+apis:
+- name: Sunrise.am World Time API
+  baseURL: https://time.now/developer/api
+  schemes: []
+  auth_required: false
+  notes: >-
+    Open/anonymous access. Requests over HTTPS only. Attribution to Time.Now
+    is requested (not technically enforced). Verified live 2026-07-21: requests
+    with no Authorization header return 200.

@@ -1,0 +1,30 @@
+generated: 2026-07-21
+method: derived
+source: Live probes of https://time.now/developer/api (2026-07-21)
+provider: sunrise-atelier
+format: custom-json
+envelope:
+  description: >-
+    4xx JSON errors return a flat object with a single string "error" field.
+    This is NOT RFC 9457 problem+json; content-type is application/json.
+  shape: '{"error": "<message>"}'
+notes: >-
+  Not every error path returns JSON: an unknown timezone on
+  /timezone/{area}/{location} returns an HTML 404 page rather than the JSON
+  error envelope. Only the observed problem types below are recorded; no
+  documented error reference exists.
+problem_types:
+- status: 400
+  operation: getTimeBySpecificIp
+  content_type: application/json
+  message: Invalid IP address format
+  remediation: Supply a syntactically valid IPv4 or IPv6 address in the /ip/{ip} path.
+  observed: '2026-07-21'
+- status: 404
+  operation: getTimeByTimezone
+  content_type: text/html
+  message: 404 - Page Not Found
+  remediation: >-
+    Use a valid IANA timezone (call GET /timezone to list all valid area/location
+    identifiers).
+  observed: '2026-07-21'

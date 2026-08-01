@@ -1,0 +1,27 @@
+overlay: 1.0.0
+# generated: 2026-07-21
+# method: generated
+# source: API Evangelist enrichment enhancements over openapi/sunrise-atelier-world-time-openapi.yaml
+info:
+  title: API Evangelist enrichment overlay - Sunrise.am World Time API
+  version: 1.0.0
+extends: ../openapi/sunrise-atelier-world-time-openapi.yaml
+actions:
+- target: $.info
+  description: Record enrichment provenance and no-auth posture.
+  update:
+    x-apievangelist-enrichment:
+      enriched: '2026-07-21'
+      auth: none
+      cors: enabled
+      error-format: custom-json
+- target: $.paths['/timezone/{area}/{location}'].get
+  description: Tag the primary lookup operation for agent discovery.
+  update:
+    x-agent-primary: true
+- target: $.paths['/ip'].get
+  description: Note privacy-friendly auto-detection behavior.
+  update:
+    x-agent-note: >-
+      Auto-detects local timezone from the requester IP without asking for
+      location permissions.

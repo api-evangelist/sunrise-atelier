@@ -1,0 +1,16 @@
+{
+  "provider": "sunrise-atelier",
+  "sources": [
+    "sunrise-atelier-ip-api-openapi.yml",
+    "sunrise-atelier-timezone-api-openapi.yml"
+  ],
+  "outputs": [
+    "sunrise-atelier-ip-api-openapi.yml",
+    "sunrise-atelier-timezone-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

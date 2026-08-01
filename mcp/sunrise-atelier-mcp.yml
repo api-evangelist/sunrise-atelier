@@ -1,0 +1,34 @@
+generated: 2026-07-21
+method: derived
+source: Derived from openapi/sunrise-atelier-world-time-openapi.yaml operations
+provider: sunrise-atelier
+status: candidate
+summary: >-
+  No official hosted or remote MCP server was found for Sunrise.am / Time.Now.
+  The following is a CANDIDATE tool list derived from the four World Time API
+  operations, offered as a proposal for an MCP wrapper. Not provider-published.
+server:
+  name: sunrise-atelier-world-time
+  transport: proposed
+  baseURL: https://time.now/developer/api
+tools:
+- name: list_timezones
+  operationId: listTimezones
+  method: GET
+  path: /timezone
+  description: List all valid IANA timezone identifiers.
+- name: get_time_by_timezone
+  operationId: getTimeByTimezone
+  method: GET
+  path: /timezone/{area}/{location}
+  description: Get the current time, offset and DST data for an IANA timezone.
+- name: get_time_by_requester_ip
+  operationId: getTimeByRequesterIp
+  method: GET
+  path: /ip
+  description: Get the current time resolved from the caller's public IP.
+- name: get_time_by_specific_ip
+  operationId: getTimeBySpecificIp
+  method: GET
+  path: /ip/{ip}
+  description: Get the current time resolved from a specified IPv4/IPv6 address.

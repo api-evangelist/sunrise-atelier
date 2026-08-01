@@ -1,0 +1,14 @@
+generated: 2026-07-21
+method: generated
+source: Grounded in openapi/sunrise-atelier-world-time-openapi.yaml operationIds
+provider: sunrise-atelier
+skills:
+- name: sunrise-atelier-get-current-time
+  file: sunrise-atelier-get-current-time.md
+  api: Sunrise.am World Time API
+  description: Get current time / UTC offset / DST for any place by IANA timezone or IP.
+  operations:
+  - listTimezones
+  - getTimeByTimezone
+  - getTimeByRequesterIp
+  - getTimeBySpecificIp

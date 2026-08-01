@@ -1,7 +1,15 @@
 aid: sunrise-atelier
 name: Sunrise Atelier
-description: Sunrise Atelier is a company surfaced as a portfolio company of 500-global and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Sunrise Atelier operates Sunrise.am, a free consumer service that provides
+  accurate sunrise, sunset, twilight, golden-hour and daylight times for every
+  city and country worldwide, plus a solar calendar, an online clock, and
+  educational articles. For developers, Sunrise.am publishes a free public
+  World Time API (documented at https://sunrise.am/developer and served from the
+  time.now host) that returns the current time, timezone information,
+  daylight-saving data, and IP-based time geolocation as clean JSON with no API
+  key required and CORS enabled. Surfaced as a portfolio company of 500 Global
+  and enriched in the API Evangelist network from its live developer surface.
 url: https://raw.githubusercontent.com/api-evangelist/sunrise-atelier/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,17 +17,100 @@ x-backed-by:
 - 500-global
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: open
+  trial: false
+  try_now: false
+  public: true
+  label: Open access
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 11
+  pass: local-v1
+image: https://sunrise.am/static/sunrise-am-og.png
 tags:
 - Company
-apis: []
+- Time
+- Timezone
+- Astronomy
+- Geolocation
+- Sunrise
+- Sunset
+- Developer API
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- aid: sunrise-atelier:sunrise-atelier-ip-api
+  name: Sunrise Atelier Ip API
+  description: The Ip API from Sunrise Atelier — 2 operation(s) for ip.
+  humanURL: https://sunrise.am/developer
+  baseURL: https://time.now/developer/api
+  tags:
+  - Ip
+  properties:
+  - type: OpenAPI
+    url: openapi/sunrise-atelier-ip-api-openapi.yml
+  - type: Documentation
+    url: https://sunrise.am/developer
+  - type: APIReference
+    url: https://sunrise.am/developer#endpoints
+  - type: Authentication
+    url: authentication/sunrise-atelier-authentication.yml
+  - type: Conventions
+    url: conventions/sunrise-atelier-conventions.yml
+  - type: ErrorCatalog
+    url: errors/sunrise-atelier-problem-types.yml
+  - type: Conformance
+    url: conformance/sunrise-atelier-conformance.yml
+- aid: sunrise-atelier:sunrise-atelier-timezone-api
+  name: Sunrise Atelier Timezone API
+  description: The Timezone API from Sunrise Atelier — 2 operation(s) for timezone.
+  humanURL: https://sunrise.am/developer
+  baseURL: https://time.now/developer/api
+  tags:
+  - Timezone
+  properties:
+  - type: OpenAPI
+    url: openapi/sunrise-atelier-timezone-api-openapi.yml
+  - type: Documentation
+    url: https://sunrise.am/developer
+  - type: APIReference
+    url: https://sunrise.am/developer#endpoints
+  - type: Authentication
+    url: authentication/sunrise-atelier-authentication.yml
+  - type: Conventions
+    url: conventions/sunrise-atelier-conventions.yml
+  - type: ErrorCatalog
+    url: errors/sunrise-atelier-problem-types.yml
+  - type: Conformance
+    url: conformance/sunrise-atelier-conformance.yml
 common:
+- type: DomainSecurity
+  url: security/sunrise-atelier-domain-security.yml
+- type: LLMsTxt
+  url: llms/sunrise-atelier-llms.txt
+- type: AgentSkill
+  url: skills/_index.yml
 - type: Website
   url: https://sunrise.am
+- type: DeveloperPortal
+  url: https://sunrise.am/developer
+- type: TermsOfService
+  url: https://sunrise.am/info/terms-privacy
+- type: PrivacyPolicy
+  url: https://sunrise.am/info/terms-privacy
+- type: Support
+  url: https://sunrise.am/info/contact

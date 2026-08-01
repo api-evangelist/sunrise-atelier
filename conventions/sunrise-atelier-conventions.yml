@@ -1,0 +1,39 @@
+generated: 2026-07-21
+method: derived
+source: https://sunrise.am/developer + live probes of the API (2026-07-21)
+provider: sunrise-atelier
+api: Sunrise.am World Time API
+baseURL: https://time.now/developer/api
+transport:
+  protocol: HTTPS
+  cors: enabled
+  formats:
+  - application/json
+authentication:
+  style: none
+  detail: Keyless public API; no credentials. See authentication/sunrise-atelier-authentication.yml
+idempotency:
+  supported: false
+  detail: All operations are safe, read-only HTTP GETs; there is no idempotency-key mechanism.
+pagination:
+  supported: false
+  detail: >-
+    GET /timezone returns the complete list of IANA timezones as a single JSON
+    array with no paging parameters or cursors.
+versioning:
+  scheme: none-observed
+  detail: No version segment in the base path and no version header observed.
+error_envelope:
+  format: custom-json
+  shape: '{"error": "<message>"}'
+  detail: See errors/sunrise-atelier-problem-types.yml (not RFC 9457).
+rate_limiting:
+  signaling: none-observed
+  detail: No RateLimit / Retry-After headers observed on 2026-07-21 responses.
+request_tracing:
+  detail: No request-id / correlation header observed.
+parameters:
+  style: path
+  detail: >-
+    Inputs are supplied as path segments (area/location, ip); no query
+    parameters are documented.

@@ -1,0 +1,25 @@
+generated: '2026-07-21'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: sunrise.am
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct  9 12:05:32 2026 GMT
+  hsts: false
+- host: time.now
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct  3 12:02:51 2026 GMT
+  hsts: false
+domains:
+- domain: sunrise.am
+  dnssec: false
+  caa: []
+  spf: false
+  dmarc: false
+- domain: time.now
+  dnssec: false
+  caa: []
+  spf: false
+  dmarc: false
