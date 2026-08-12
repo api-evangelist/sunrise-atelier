@@ -98,6 +98,10 @@ apis:
   - type: Conformance
     url: conformance/sunrise-atelier-conformance.yml
 common:
+- type: MCPServer
+  url: mcp/sunrise-atelier-mcp.yml
+- type: Overlay
+  url: overlays/sunrise-atelier-world-time-overlay.yaml
 - type: DomainSecurity
   url: security/sunrise-atelier-domain-security.yml
 - type: LLMsTxt
