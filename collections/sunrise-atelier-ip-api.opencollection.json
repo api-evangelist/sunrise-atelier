@@ -1,0 +1,48 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Sunrise.am World Time Ip API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Ip",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get current time for the requester IP",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://time.now/developer/api/ip"
+          },
+          "docs": "Returns the current time based on the public IP address of the requester, auto-detecting the caller's local timezone."
+        },
+        {
+          "info": {
+            "name": "Get current time for a specific IP",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://time.now/developer/api/ip/:ip",
+            "params": [
+              {
+                "name": "ip",
+                "value": "8.8.8.8",
+                "type": "path",
+                "description": "IPv4 or IPv6 address to geolocate."
+              }
+            ]
+          },
+          "docs": "Returns the current time resolved from a specific IPv4/IPv6 address."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

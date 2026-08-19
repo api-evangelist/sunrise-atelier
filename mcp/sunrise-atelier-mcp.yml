@@ -3,10 +3,9 @@ method: derived
 source: Derived from openapi/sunrise-atelier-world-time-openapi.yaml operations
 provider: sunrise-atelier
 status: candidate
-summary: >-
-  No official hosted or remote MCP server was found for Sunrise.am / Time.Now.
-  The following is a CANDIDATE tool list derived from the four World Time API
-  operations, offered as a proposal for an MCP wrapper. Not provider-published.
+summary: No official hosted or remote MCP server was found for Sunrise.am / Time.Now. The following is
+  a CANDIDATE tool list derived from the four World Time API operations, offered as a proposal for an
+  MCP wrapper. Not provider-published.
 server:
   name: sunrise-atelier-world-time
   transport: proposed
@@ -32,3 +31,9 @@ tools:
   method: GET
   path: /ip/{ip}
   description: Get the current time resolved from a specified IPv4/IPv6 address.
+deployment:
+  mode: none
+  verified: derived
+  tools: 4
+  checked: '2026-08-12'
+  source: catalog MCP census

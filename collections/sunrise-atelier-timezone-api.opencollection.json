@@ -1,0 +1,54 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Sunrise.am World Time Ip Timezone API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Timezone",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all IANA timezones",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://time.now/developer/api/timezone"
+          },
+          "docs": "Returns a JSON array of all valid IANA timezone strings."
+        },
+        {
+          "info": {
+            "name": "Get current time for a timezone",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://time.now/developer/api/timezone/:area/:location",
+            "params": [
+              {
+                "name": "area",
+                "value": "Europe",
+                "type": "path",
+                "description": "IANA area, e.g. Europe, America, Asia."
+              },
+              {
+                "name": "location",
+                "value": "London",
+                "type": "path",
+                "description": "IANA location, e.g. London, New_York."
+              }
+            ]
+          },
+          "docs": "Returns the current time object for a specific IANA timezone, e.g. Europe/London. Some IANA zones contain three path segments (e.g. America/Argentina/Buenos_Aires)."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
