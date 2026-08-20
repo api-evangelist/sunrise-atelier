@@ -59,6 +59,8 @@ apis:
   humanURL: https://sunrise.am/developer
   baseURL: https://time.now/developer/api
   tags:
+  - IP
+  tags_raw:
   - Ip
   properties:
   - type: OpenAPI
