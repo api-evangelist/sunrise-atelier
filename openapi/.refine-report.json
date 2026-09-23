@@ -1,8 +1,7 @@
 {
   "provider": "sunrise-atelier",
   "sources": [
-    "sunrise-atelier-ip-api-openapi.yml",
-    "sunrise-atelier-timezone-api-openapi.yml"
+    "_original/sunrise-atelier-world-time-openapi.yaml"
   ],
   "outputs": [
     "sunrise-atelier-ip-api-openapi.yml",
@@ -11,6 +10,19 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "sunrise-atelier-world-time-openapi.yaml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "sunrise-atelier-world-time-openapi.yaml: tagged paths GET /timezone -> Timezone",
+    "sunrise-atelier-world-time-openapi.yaml: tagged paths GET /timezone/{area}/{location} -> Timezone",
+    "sunrise-atelier-world-time-openapi.yaml: tagged paths GET /ip -> Ip",
+    "sunrise-atelier-world-time-openapi.yaml: tagged paths GET /ip/{ip} -> Ip",
+    "sunrise-atelier-world-time-openapi.yaml: declared missing tag: Ip",
+    "sunrise-atelier-world-time-openapi.yaml: declared missing tag: Timezone",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "sunrise-atelier-ip-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sunrise-atelier-timezone-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

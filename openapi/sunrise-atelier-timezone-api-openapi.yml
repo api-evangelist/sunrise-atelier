@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Sunrise.am World Time Ip Timezone API
+  title: Sunrise.am World Time Timezone API
   version: '1.0'
   description: A free, public JSON API that returns the current time, timezone information, daylight-saving (DST) data, and IP-based geolocation of time for any location on Earth. No API key is required and CORS is enabled. Documented at https://sunrise.am/developer and served from the time.now host (mirrored on sunrise.am). This specification was generated from live responses observed on 2026-07-21 and the published developer documentation; it is not an official provider-published OpenAPI file.
   termsOfService: https://sunrise.am/developer#attribution
