@@ -59,13 +59,6 @@ paths:
       - Ip
 components:
   schemas:
-    Error:
-      type: object
-      description: Error envelope observed on 4xx JSON responses.
-      properties:
-        error:
-          type: string
-          example: Invalid IP address format
     TimeObject:
       type: object
       description: Fields observed on live 2026-07-21 responses. The published docs list a subset; abbreviation, client_ip, dst_from, dst_until and raw_offset were additionally observed on the wire.
@@ -116,3 +109,10 @@ components:
         client_ip:
           type: string
           description: The IP address used for the geo-lookup.
+    Error:
+      type: object
+      description: Error envelope observed on 4xx JSON responses.
+      properties:
+        error:
+          type: string
+          example: Invalid IP address format
