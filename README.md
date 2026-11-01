@@ -64,6 +64,110 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Sunrise Atelier is a company surfaced as a portfolio company of 500-global and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Sunrise Atelier operates Sunrise.am, a free consumer service that provides accurate sunrise, sunset, twilight, golden-hour and daylight times for every city and country worldwide, plus a solar calendar, an online clock, and educational articles. For developers, Sunrise.am publishes a free public World Time API (documented at https://sunrise.am/developer and served from the time.now host) that returns the current time, timezone information, daylight-saving data, and IP-based time geolocation as clean JSON with no API key required and CORS enabled. Surfaced as a portfolio company of 500 Global and enriched in the API Evangelist network from its live developer surface.
 
-Backed by: 500-global — https://sunrise.am
+**Areas:** Company · Time · Timezone · Astronomy · Geolocation · Sunrise · Sunset · Developer API
+
+## Sunrise Atelier on APIs.io
+
+Everything profiled for Sunrise Atelier is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/sunrise-atelier/](https://apis.io/providers/sunrise-atelier/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [Sunrise Atelier Ip API](https://apis.io/apis/sunrise-atelier/sunrise-atelier-ip-api/) — The Ip API from Sunrise Atelier — 2 operation(s) for ip.
+- [Sunrise Atelier Timezone API](https://apis.io/apis/sunrise-atelier/sunrise-atelier-timezone-api/) — The Timezone API from Sunrise Atelier — 2 operation(s) for timezone.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [sunrise-atelier-world-time](https://apis.io/servers/sunrise-atelier/sunrise-atelier-world-time/)
+
+#### Collections (2)
+
+Postman and Open Collection request collections.
+
+- [Sunrise.am World Time Ip API](https://apis.io/collections/sunrise-atelier/open-sunrise-atelier-ip-api/)
+- [Sunrise.am World Time Ip Timezone API](https://apis.io/collections/sunrise-atelier/open-sunrise-atelier-timezone-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Sunrise Atelier World Time Overlay](https://apis.io/overlays/sunrise-atelier/sunrise-atelier-world-time-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Sunrise Atelier Authentication](https://apis.io/security/sunrise-atelier/sunrise-atelier-authentication/)
+- [Sunrise Atelier Domain Security](https://apis.io/security/sunrise-atelier/sunrise-atelier-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://sunrise.am)
+- [Support](https://sunrise.am/info/contact)
+- [Blog](https://sunrise.am/articles/)
+- [Terms of service](https://sunrise.am/info/terms-privacy)
+- [Privacy policy](https://sunrise.am/info/terms-privacy)
+
+## API Evangelist rating
+
+**Kin Score 42.3** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 49.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 47.0 |
+| Access clarity | 57.1 |
+
+**Agent readiness 26.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | — |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 24.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/sunrise-atelier/](https://apis.io/providers/sunrise-atelier/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Sunrise Atelier: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/sunrise-atelier/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
